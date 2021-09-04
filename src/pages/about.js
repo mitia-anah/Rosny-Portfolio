@@ -1,73 +1,23 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 import config from "../../data/siteConfig"
+import Rosny from "../images/rosny.png"
 const Aboutpage = () => {
-  const query = graphql`
-    query {
-      site {
-        siteMetadata {
-          githubUsername
-          twitterUsername
-          linkedInUsername
-        }
-      }
-    }
-  `
   return (
     <Layout>
       <Helmet title={`Me - ${config.userName}`} />
       <div>
-        <h2>About me</h2>
-        <div>
+        <Title>About me</Title>
+        <AboutWrapper>
           <Aside>
-            <img
-              src="https://scontent.ftnr2-1.fna.fbcdn.net/v/t1.6435-9/cp0/e15/q65/s320x320/109689739_1584498751719418_7994595954732994583_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8024bb&_nc_ohc=Luo9ozseRxIAX8bS2CY&_nc_ht=scontent.ftnr2-1.fna&oh=8788969d682a4c48960e998af5333e96&oe=614776E1"
-              alt="me smiling holding my computer"
-            />
+            <img src={`${Rosny}`} alt="me smiling holding my computer" />
             <div>
-              <ul>
-                <li>
-                  Profession:{" "}
-                  <span>
-                    Front End developer, at{" "}
-                    <a href="http://onja.org">NGO Onja</a>
-                  </span>
-                </li>
-                <li>
-                  Country/City:{" "}
-                  <span>
-                    <a href="https://en.wikipedia.org/wiki/Madagascar">
-                      {" "}
-                      Madagascar,
-                    </a>
-                  </span>
-                  <span>
-                    <a href="https://en.wikipedia.org/wiki/Mahanoro">
-                      Mahanoro
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  Email:{" "}
-                  <span>
-                    <a href="mailto:rratsianompo@gmail.com">Rosny@gmail.com</a>
-                  </span>
-                </li>
-                <li>
-                  <a href="https://github.com/mitia-anah">
-                    <img
-                      src="https://img.icons8.com/color/40/000000/github--v1.png"
-                      alt=""
-                    />
-                  </a>
-                  <a href="http://">
-                    <img src="https://img.icons8.com/nolan/40/linkedin.png" />
-                  </a>
-                </li>
-              </ul>
+              Profession: <span>Front End developer, at</span>
+              <div>
+                <a href="http://onja.org">NGO Onja</a>
+              </div>
             </div>
           </Aside>
           <Article>
@@ -94,16 +44,31 @@ const Aboutpage = () => {
               development as far as I can reach.
             </p>
           </Article>
-        </div>
+        </AboutWrapper>
       </div>
     </Layout>
   )
 }
 
+const Title = styled.h2`
+  text-align: center;
+`
+
+const AboutWrapper = styled.div`
+  text-align: center;
+  @media (min-width: 800px) {
+    display: flex;
+    gap: 2rem;
+  }
+`
 const Aside = styled.aside`
   border-bottom: 3px solid #c0c0c0;
-  @media (min-width: 600px) {
+  img {
+    width: 50%;
+  }
+  @media (min-width: 800px) {
     border-bottom: 0;
+    max-width: 200px;
   }
   ul {
     padding-start: none;
@@ -120,8 +85,10 @@ const Aside = styled.aside`
 
 const Article = styled.article`
   padding-top: 3rem;
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     padding-top: 0;
+    width: 700px;
+    text-align: start;
   }
 `
 export default Aboutpage

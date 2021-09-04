@@ -1,28 +1,9 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import contactStyle from "../components/modules/contact.module.scss"
 import Helmet from "react-helmet"
 import config from "../../data/siteConfig"
 const Contact = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          Email
-          githubUsername
-          twitterUsername
-          linkedInUsername
-        }
-      }
-    }
-  `)
-  const {
-    Email,
-    githubUsername,
-    twitterUsername,
-    linkedInUsername,
-  } = data.site.siteMetadata
   return (
     <Layout>
       <Helmet title={`Contact - ${config.userName}`} />
@@ -37,25 +18,32 @@ const Contact = () => {
         </p>
         <ul className={contactStyle.list}>
           <li>
-            Email:{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className={contactStyle.link}
-              href={`mailto:${data.site.siteMetadata.Email}`}
-            >
-              {Email}
-            </a>
+            Email: <a href="mailto: rratsianompo@gmail.com">rosny@gmail.com</a>
+            <span>
+              <img
+                src="https://img.icons8.com/bubbles/50/000000/email--v1.png"
+                alt="bubble icon"
+              />
+            </span>
           </li>
           <li>
             Github:{" "}
             <a
-              target="_blank"
-              rel="noopener noreferrer"
               className={contactStyle.link}
-              href={`https://github.com/${githubUsername}`}
+              href={`https://github.com/mitia-anah`}
             >
-              {githubUsername}
+              <img
+                src="https://img.icons8.com/color/40/000000/github--v1.png"
+                alt="color icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://linkdIn.com">
+              <img
+                src="https://img.icons8.com/nolan/40/linkedin.png"
+                alt="nolan icon"
+              />
             </a>
           </li>
         </ul>
