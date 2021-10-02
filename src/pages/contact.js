@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import contactStyle from "../components/modules/contact.module.scss"
 import Helmet from "react-helmet"
 import config from "../../data/siteConfig"
+import styled from "styled-components"
 const Contact = () => {
   return (
     <Layout>
@@ -10,23 +11,18 @@ const Contact = () => {
       <div>
         <h2 className={contactStyle.title}>Stay in touch</h2>
         <p>
-          I write about stuff related to Javascript, React, PHP, Flask and
-          Various useful Api.
+          I write about stuff related to Javascript, React, Redux and
+          Typescript.
         </p>
         <p className={contactStyle.subtitle}>
           You can contact me via email or find me around the web.
         </p>
-        <ul className={contactStyle.list}>
-          <li>
-            Email: <a href="mailto: rratsianompo@gmail.com">rosny@gmail.com</a>
-            <span>
-              <img
-                src="https://img.icons8.com/bubbles/50/000000/email--v1.png"
-                alt="bubble icon"
-              />
-            </span>
-          </li>
-          <li>
+        <ListWrapper className={contactStyle.list}>
+          <List>
+            Email:
+            <a href="mailto: rratsianompo@gmail.com">rosny@gmail.com</a>
+          </List>
+          <List>
             Github:{" "}
             <a
               className={contactStyle.link}
@@ -37,18 +33,28 @@ const Contact = () => {
                 alt="color icon"
               />
             </a>
-          </li>
-          <li>
+          </List>
+          <List>
+            LinkdIn:
             <a href="https://linkdIn.com">
               <img
                 src="https://img.icons8.com/nolan/40/linkedin.png"
                 alt="nolan icon"
               />
             </a>
-          </li>
-        </ul>
+          </List>
+        </ListWrapper>
       </div>
     </Layout>
   )
 }
+
+const ListWrapper = styled.ul`
+  padding-inline-start: 0;
+  margin-inline-start: 0;
+`
+const List = styled.li`
+  list-style: none;
+`
+
 export default Contact
