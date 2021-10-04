@@ -10,10 +10,9 @@ const Indexpage = () => {
       <div>
         <h1>Hi, I am Rosny</h1>
         <p>
-          I'm web developer specializing in modern javascript. I like to
-          <br /> make things from scratch, contribute to open source, and write{" "}
-          <br />
-          about latest development in web technology.
+          I'm a web developer specializing in modern javascript. I like
+          <br /> to make things from scratch, <br />
+          contribute to open-source projects, and use the latest technologies.
         </p>
       </div>
     </Layout>

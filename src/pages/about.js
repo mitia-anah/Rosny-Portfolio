@@ -21,27 +21,18 @@ const Aboutpage = () => {
             </div>
           </Aside>
           <Article>
-            <p>I'm Rosny, a front-end developer based in Madagascar.</p>
             <p>
-              I study at Onja, which is a social enterprise that uspskills
-              underprivileged youth who are not able to continue their education
-              at university. Onja’s main goal is to teach young people English
-              and Coding, and to offer them a job once they fulfill two years of
-              learning on these two subjects. I was one of the lucky people who
-              got this amazing opportunity.
+              I'm Rosny, a front-end developer based in Madagascar, working to
+              make the world and Madagascar a better place.
             </p>
             <p>
-              My two years of experience in coding and English has led me into a
-              very big desire to make the world and Madagascar a better place. I
-              work with HTML5, CSS3, Vanilla JavaScript and React,
-              andTypeScript. I’ve also worked with React native before but I
-              would like to have more experience on it.
+              I have three years of English experience and two years of coding
+              experience. I’ve built some projects, which are built with HTML5
+              and CSS3, Vanilla Javascript, React, Redux and Typescript.
             </p>
             <p>
-              Life learning is a bit challenging, especially when it comes to a
-              new world that you haven’t been to yet. But I like challenging
-              myself to learn more and more and to get my hands dirty on web
-              development as far as I can reach.
+              I was trained at Onja NGO, an organisation that upskills
+              underprivileged youth in Madagascar.
             </p>
           </Article>
         </AboutWrapper>
